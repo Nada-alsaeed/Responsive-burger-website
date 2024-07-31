@@ -1,0 +1,201 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(45, 99%, 55%);
+  --first-color-alt: hsl(45, 99%, 48%);
+  --second-color: hsl(22, 100%, 8%);
+  --white-color: hsl(34, 100%, 96%);
+  --title-color: hsl(22, 100%, 8%);
+  --text-color: hsl(22, 24%, 32%);
+  --text-color-light: hsl(27, 6%, 68%);
+  --body-color: hsl(34, 100%, 92%);
+  --body-color-alt: hsl(34, 100%, 88%);
+  --container-color: hsl(34, 100%, 96%);
+  --shadow-small-img: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
+  --shadow-big-img: drop-shadow(0 8px 24px hsla(22, 100%, 8%, 0.2));
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Aclonica", sans-serif;
+  --biggest-font-size: 3rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-regular);
+  /* text-align: center; */
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:hover,
+.active {
+  border-bottom: 2px solid var(--first-color-alt);
+}
+header {
+  background-color: var(--body-color);
+  z-index: 999;
+}
+.styl {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.back {
+  background-color: var(--first-color);
+}
+.back i{
+  right: 3%;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+.anna {
+  position: relative; /* تأكد من أن العنصر قابل للتحريك باستخدام top */
+  transition: all .3s ease-in-out;
+}
+
+.back:hover .anna {
+  transform: translateY(-40px);
+  transition: all .3s ease-in-out;
+}
+.basket {
+  background-color: var(--title-color);
+  color: white;
+}
+.content {
+  background-color: var(--second-color);
+  color: var(--text-color-light) !important;
+}
+.content h4,
+h5 {
+  color: white;
+}
+#icons {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+/* #icons:hover{
+  transform: translateY(-25px);
+} */
+.sticker-burger {
+  left: 40%;
+  bottom: 55%;
+}
+footer {
+  height: 30vh;
+}
+
+.bi.bi-facebook {
+  transform: scale(1.1, 1.1) !important;
+}
+.recipe-ber {
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.ellipsed_title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body::-webkit-scrollbar {
+  width: 12px; /* عرض الشريط العمودي */
+  height: 12px; /* ارتفاع الشريط الأفقي */
+}
+
+/* تخصيص مسار الشريط */
+body::-webkit-scrollbar-track {
+  background: #f0f0f0; 
+}
+
+/* تخصيص مقبض الشريط */
+body::-webkit-scrollbar-thumb {
+  background-color: var(--body-color-alt); 
+  border-radius: 6px; 
+  border: 2px solid #c7c0c0; /* يخلق تأثير ظل */
+}
+
+/* تخصيص مقبض الشريط عند التمرير */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+.modal-body , .modal-footer , .modal-header{
+  background-color: var(--body-color);
+}
