@@ -25,3 +25,29 @@ window.addEventListener("scroll", () => {
     header.classList.remove("fixed-top");
   }
 });
+
+
+function toggleCardContent(button) {
+  // الحصول على الكارد بأكمله
+  const card = button.closest('.back');
+
+  // نسخ الكارد
+  const cardClone = card.cloneNode(true);
+
+  // إزالة الزرار من النسخة
+  const buttonInClone = cardClone.querySelector('.bi-basket-fill');
+  if (buttonInClone) {
+      buttonInClone.remove();
+  }
+  const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove from Toggle';
+        removeButton.className = 'remove-button'; // إضافة الفئة للزرار
+        removeButton.onclick = function() {
+            cardClone.remove();
+        };
+  // إضافة زرار الإزالة إلى الكارد المنسوخ
+  cardClone.appendChild(removeButton);
+  // إضافة النسخة إلى العنصر toggle-body
+  const toggleBody = document.getElementById('toggleBody');
+  toggleBody.appendChild(cardClone);
+}

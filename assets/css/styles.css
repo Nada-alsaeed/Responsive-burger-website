@@ -19,7 +19,7 @@
   --container-color: hsl(34, 100%, 96%);
   --shadow-small-img: drop-shadow(0 4px 16px hsla(22, 100%, 8%, 0.2));
   --shadow-big-img: drop-shadow(0 8px 24px hsla(22, 100%, 8%, 0.2));
-
+--hover-second:hsl(22, 90%, 4%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
@@ -198,4 +198,17 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .modal-body , .modal-footer , .modal-header{
   background-color: var(--body-color);
+}
+.remove-button {
+  background-color: var(--second-color); /* لون خلفية الزر */
+  color: white; /* لون النص */
+  border: none; /* إزالة الحدود */
+  padding: 8px 16px; /* مسافة داخلية */
+  border-radius: 5px; /* حواف دائرية */
+  cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+  font-size: 16px; /* حجم النص */
+  margin-top: 10px; /* مسافة فوق الزر */
+}
+.remove-button:hover {
+  background-color: var(--first-color-alt); /* لون خلفية الزر عند المرور فوقه */
 }

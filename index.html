@@ -40,8 +40,14 @@
             <i><a href="#delivery">Delhery</a></i>
             <i><a href="#Contact">Contact</a></i>
          </ul>
-         <div class="">
-         <i class="bi bi-basket-fill fs-3 mx-3"></i>
+         <div class="d-flex flex-row ">
+         <a
+         class=""
+         data-bs-toggle="modal"
+         href="#exampleModalToggle"
+         role="button"
+         ><i class="bi bi-basket-fill fs-3 mx-3"></i>
+         </a>
          <!-- <i class="bi bi-list list-berger text-black fs-3 d-md-none" id="menuIcon"></i> -->
          <button class="btn btn-warning d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id1"
             aria-controls="Id1">
@@ -68,6 +74,88 @@
          </ul>
       </div>
    </div>
+<div
+   class="modal fade"
+   id="exampleModalToggle"
+   aria-hidden="true"
+   aria-labelledby="exampleModalToggleLabel"
+   tabindex="-1"
+>
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalToggleLabel">
+               Your requests
+            </h4>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+            ></button>
+         </div>
+         <div class="modal-body" id="toggleBody">
+         
+         </div>
+         <div class="modal-footer d-flex justify-content-center">
+            <button
+               class="btn btn-warning btn-sm"
+               data-bs-target="#exampleModalToggle2"
+               data-bs-toggle="modal"
+            >
+               Send
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div
+   class="modal fade"
+   id="exampleModalToggle2"
+   aria-hidden="true"
+   aria-labelledby="exampleModalToggleLabel2"
+   tabindex="-1"
+>
+   <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalToggleLabel2">
+               Your requests
+            </h4>
+            <button
+               type="button"
+               class="btn-close"
+               data-bs-dismiss="modal"
+               aria-label="Close"
+            ></button>
+         </div>
+         <div class="modal-body">
+            The request has been sent and you will receive it within an hour
+         </div>
+         <div class="modal-footer d-flex justify-content-center">
+            <button
+               type="button"
+               class="btn btn-warning btn-sm"
+               data-bs-dismiss="modal"
+            >
+               Close
+            </button>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
    <!--==================== MAIN ====================-->
    <main class="container">
@@ -175,18 +263,18 @@
                   <h4 class="fw-bold fs-6 ellipsed_title">Big Burger</h4>
                   <div class="d-flex flex-row justify-content-between">
                      <p class="fw-bold fs-4">$15</p>
-                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2"></i>
+                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2" onclick="toggleCardContent(this)"></i>
                   </div>
                </div>
             </div>
-            <div
+            <div 
                class="back rounded-5 position-relative border-white border-5 p-2 row col-lg-3 col-md-5 mx-md-auto d-flex align-items-center justify-content-center m-lg-4 my-3">
                <img src="assets/img/popular-burger-chicken.png" alt="" class="anna position-relative">
                <div class="">
                   <h4 class="fw-bold fs-6 ellipsed_title">Chicken Burger</h4>
                   <div class="d-flex flex-row justify-content-between">
                      <p class="fw-bold fs-4">$15</p>
-                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2"></i>
+                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2" onclick="toggleCardContent(this)"></i>
                   </div>
                </div>
             </div>
@@ -197,7 +285,7 @@
                   <h4 class="fw-bold fs-6 ellipsed_title">Classic Burger</h4>
                   <div class="d-flex flex-row justify-content-between">
                      <p class="fw-bold fs-4">$15</p>
-                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2"></i>
+                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2" onclick="toggleCardContent(this)"></i>
                   </div>
                </div>
             </div>
@@ -208,7 +296,7 @@
                   <h4 class="fw-bold fs-6 ellipsed_title">Grill Burger</h4>
                   <div class="d-flex flex-row justify-content-between">
                      <p class="fw-bold fs-4">$15</p>
-                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2"></i>
+                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2" onclick="toggleCardContent(this)"></i>
                   </div>
                </div>
             </div>
@@ -219,7 +307,7 @@
                   <h4 class="fw-bold fs-6 ellipsed_title">Meat Burger</h4>
                   <div class="d-flex flex-row justify-content-between">
                      <p class="fw-bold fs-4">$15</p>
-                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2"></i>
+                     <i class="bi bi-basket-fill basket fs-5 px-2 rounded position-absolute bottom-0 end-0 p-1 px-2" onclick="toggleCardContent(this)"></i>
                   </div>
                </div>
             </div>
